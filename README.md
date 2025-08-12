@@ -63,20 +63,20 @@ O banco deseja modernizar suas operações e, para a **primeira versão (v1)**, 
 ## Como Executar
 
 
-[1] Depositar
-[2] Sacar
-[3] Extrato
-[4] Ver Saldo
-[5] Sair
+[1] Depositar<br>
+[2] Sacar<br>
+[3] Extrato<br>
+[4] Ver Saldo<br>
+[5] Sair<br>
 
-Digite a opção desejada: 1
-Valor do depósito: R$ 200.00
+Digite a opção desejada: 1<br>
+Valor do depósito: R$ 200.00<br>
 
-Digite a opção desejada: 3
-==== EXTRATO ====
-Depósito: R$ 200.00
+Digite a opção desejada: 3<br>
+==== EXTRATO ====<br>
+Depósito: R$ 200.00<br>
 Saldo: R$ 200.00
-=================
+
 
 ## 📌 Observações
 
