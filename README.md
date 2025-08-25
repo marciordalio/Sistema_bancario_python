@@ -5,7 +5,7 @@
 
 ---
 
-## 📌 Descrição do Desafio
+## 📌 Descrição do Desafio PARTE - 1
 Este projeto é um **sistema bancário simples** desenvolvido em Python como parte de um exercício proposto pelo professor **Guilherme Arthur de Carvalho**.
 
 O objetivo é implementar **três operações principais**:
@@ -49,19 +49,6 @@ O banco deseja modernizar suas operações e, para a **primeira versão (v1)**, 
 ---
 
 ## Como Executar
-1. Clone este repositório:
- ```bash
- git clone https://github.com/marciordalio/https://github.com/marciordalio/banco_python.git
-
- cd BANCO_PYTHON
-
- python sistema_bancario.py
-
-
- ```
-
-## Como Executar
-
 
 [1] Depositar
 [2] Sacar
@@ -78,7 +65,41 @@ Depósito: R$ 200.00
 Saldo: R$ 200.00
 =================
 
-## 📌 Observações
+## 📌 Descrição do Desafio PARTE - 2
 
-    Este projeto é apenas um exercício de prática.
-    Não possui persistência em banco de dados (os dados são perdidos ao encerrar o programa).
+
+
+## 🏦 Parte 2 - Sistema Bancário com Funções Python (EM DESENVOLVIMENTO....)
+
+Nesta parte do projeto, o **Sistema Bancário** foi refatorado para utilizar **funções **, deixando o código mais organizado, reutilizável e de fácil manutenção.
+
+### 📌 Funções Principais
+
+#### Menu
+Exibe as opções disponíveis para o usuário:
+
+```python
+def menu():
+    menu = """\n
+    ================ MENU ================
+    [d]\tDepositar
+    [s]\tSacar
+    [e]\tExtrato
+    [nc]\tNova conta
+    [lc]\tListar contas
+    [nu]\tNovo usuário
+    [q]\tSair
+     """
+ ```
+
+   ## Como Executar
+1. Clone este repositório:
+ ```bash
+ git clone https://github.com/marciordalio/https://github.com/marciordalio/banco_python.git
+
+ cd BANCO_PYTHON
+
+ python sistema_bancario.py
+
+
+ ```
