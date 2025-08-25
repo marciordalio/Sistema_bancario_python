@@ -49,7 +49,7 @@ O banco deseja modernizar suas operações e, para a **primeira versão (v1)**, 
 ---
 
 ## Como Executar
-
+```
 [1] Depositar
 [2] Sacar
 [3] Extrato
@@ -60,13 +60,13 @@ Digite a opção desejada: 1
 Valor do depósito: R$ 200.00
 
 Digite a opção desejada: 3
-==== EXTRATO ====
 Depósito: R$ 200.00
 Saldo: R$ 200.00
-=================
+```
+
+
 
 ## 📌 Descrição do Desafio PARTE - 2
-
 
 
 ## 🏦 Parte 2 - Sistema Bancário com Funções Python (EM DESENVOLVIMENTO....)
