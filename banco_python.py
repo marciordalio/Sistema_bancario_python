@@ -51,7 +51,8 @@ def saque(saldo, valor, extrato, limite, numeros_de_saque, limite_de_saque ):
 
     return saldo, extrato, valor, numeros_de_saque
    
-def extrato(): 
+def extrato_func(saldo, / ,*,extrato): 
+     
   
      print("\n========EXTRATO==========")
      print(" Não foram realizadas movimentações!" if not extrato else extrato)
@@ -59,13 +60,14 @@ def extrato():
      print(f" R${saldo}")
      print("=========================")
 
-def  saldo_atual():
+def saldo_atual(saldo):
+    print("==============================")
     print(f" \nSeu saldo atual é: {saldo}")
+    print("==============================")
 
 def sair():
     print(" Muito obrigado por usar nossos serviços!")
    
-
 def main():
  saques_diarios = 3 
  numeros_de_saque = 0
@@ -97,5 +99,14 @@ def main():
          
 
       )
+   elif opcao == 3:
+      extrato_func(saldo , extrato = extrato)
+
+
+   elif opcao ==4:
+      saldo_atual(saldo)
+
+
+   
       
 main()
