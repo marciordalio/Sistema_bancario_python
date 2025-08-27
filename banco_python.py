@@ -7,6 +7,7 @@ def menu():
     2-Saque
     3-Extrato
     4-Ver saldo
+    5-Novo usaário             
     5-Sair
                     
     Digite sua opção:"""))
@@ -61,10 +62,32 @@ def extrato_func(saldo, / ,*,extrato):
      print("=========================")
 
 def saldo_atual(saldo):
+    
     print("==============================")
     print(f" \nSeu saldo atual é: {saldo}")
     print("==============================")
 
+def novo_usuario(lista_de_usuarios):
+   cpf = input("informe seu CPF(somente numeros)")
+
+
+   if filtra_usuario(cpf, lista_de_usuarios):
+      print("Usuário já existe!")
+      return
+   
+   else:
+    nome = input("Digite seu nome: ")
+    data_de_nascimento = input("Digite sua data de nascimento (dd-mm-aaaa): ")
+    endereco = input("Digite seu endereço: ")
+    lista_de_usuarios.append({"nome": nome,"data_de_nascimento":data_de_nascimento, "endereco":endereco, "cpf":cpf })
+    print("Usuário criado com sucesso!")
+
+def filtra_usuario(cpf, lista_de_usuarios):
+   for usuarios in lista_de_usuarios:
+      if usuarios["cpf"] == cpf:
+         return True
+   return False
+  
 def sair():
     print(" Muito obrigado por usar nossos serviços!")
    
@@ -75,6 +98,7 @@ def main():
  extrato = ""
  limite = 500
  LIMITE_DE_SAQUE = 3
+ lista_de_usuarios= []
 
  #CHAMANDO FUNÇÔES
 
@@ -106,7 +130,10 @@ def main():
    elif opcao ==4:
       saldo_atual(saldo)
 
+   elif opcao == 5: 
+      novo_usuario(lista_de_usuarios )
+      
 
-   
+
       
 main()
