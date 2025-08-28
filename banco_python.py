@@ -1,8 +1,8 @@
 
 
-def menu():
- menu = int(input ( """
-  ============= Bem-vindo ao banco Python, seleciona uma opção! =============
+def menu(nome):
+ menu = int(input (f"""
+  ============= Bem-vindo ao banco Python, {nome} seleciona uma opção! =============
     1-Deposito
     2-Saque
     3-Extrato
@@ -103,15 +103,19 @@ def criar_conta(agencia, numero_conta, lista_de_usuarios):
         print("\nUsuário não encontrado, por favor crie um usuário antes de criar uma conta!")
         return None
 
-
+def buscar_nome_usuario(cpf, lista_de_usuarios):
+    for usuario in lista_de_usuarios:
+        if usuario["cpf"] == cpf:
+            return usuario["nome"]
+    return None
    
+
 
 def sair():
     print(" Muito obrigado por usar nossos serviços!")
    
 def main():
  AGENCIA = "0001"
- saques_diarios = 3 
  numeros_de_saque = 0
  saldo = 0
  extrato = ""
@@ -120,10 +124,27 @@ def main():
  lista_de_usuarios= []
  contas = []
 
- #CHAMANDO FUNÇÔES
+
+
+
+ 
+ while not lista_de_usuarios: #Verifica o cadastro
+      print("\n=== Nenhum usuário cadastrado! ===")
+      print("Cadastre pelo menos um usuário para iniciar o sistema")
+      novo_usuario(lista_de_usuarios)
 
  while True:
-   opcao = menu()
+    cpf_login = input("\nDigite seu CPF para acessar o sistema: ")
+    nome = buscar_nome_usuario(cpf_login, lista_de_usuarios)
+    if nome:
+            break
+    else:
+            print("Usuário não encontrado. Tente novamente.")
+
+
+ #CHAMANDO FUNÇÔES
+ while True:
+   opcao = menu(nome)
     
    if opcao == 1:
       valor = float(input("Qual valor deseja Depositar:")) 
@@ -154,7 +175,7 @@ def main():
       novo_usuario(lista_de_usuarios )
       
    elif opcao == 6:
-      numero_conta = ""  # Defina um valor inicial para numero_conta
+      numero_conta = ""  
       nova_conta= criar_conta(AGENCIA, numero_conta, lista_de_usuarios)
       if nova_conta:
         contas.append(nova_conta)

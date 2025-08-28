@@ -81,14 +81,13 @@ Exibe as opções disponíveis para o usuário:
 ```python
 def menu():
     menu = """\n
-    ================ MENU ================
-    [d]\tDepositar
-    [s]\tSacar
-    [e]\tExtrato
-    [nc]\tNova conta
-    [lc]\tListar contas
-    [nu]\tNovo usuário
-    [q]\tSair
+    ================ Bem-vindo ao banco Python, {nome} seleciona uma opção!  ================
+    1-Deposito
+    2-Saque
+    3-Extrato
+    4-Ver saldo
+    5-Novo usuário             
+    6-Criar conta
      """
  ```
 
